@@ -17,39 +17,28 @@ public class Main {
 
         HospitalService service = myContext.getBean(HospitalService.class);
 
-    System.out.println(" Patients for Doctor 26 ");
+    System.out.println(" Patients for Doctor by ID ");
     List<String> patients = service.getPatientsForDoctor(26);
         patients.forEach(p -> System.out.println("  → " + p));
 
 
-        System.out.println("Medical Records for Patient");
     List<MedicalRecord> records = service.getMedicalRecordsForPatient(9);
         records.forEach(r -> System.out.println("  → " + r));
 
-
-        System.out.println(" Appointment Count Per Doctor");
         service.printAppointmentCountPerDoctor();
 
-        System.out.println(" Doctor Patient Count");
         service.printDoctorPatientCount();
 
-        System.out.println(" Update Appointment");
+        System.out.println(" Update Appointment status");
         service.updateAppointmentStatus(37, "Completed");
 
-
-        System.out.println(" Delete Patient");
         service.deletePatient(6);
 
 
-        System.out.println(" Doctors with > 5 Patients");
         service.printDoctorsWithMoreThanFivePatients();
 
-
-        System.out.println(" Patients with Multiple Diagnose");
         service.printPatientsWithMultipleDiagnoses();
 
-
-        System.out.println(" Appointments Per Month ");
         service.printAppointmentsPerMonth();
 
         System.out.println("All tasks completed successfully!");

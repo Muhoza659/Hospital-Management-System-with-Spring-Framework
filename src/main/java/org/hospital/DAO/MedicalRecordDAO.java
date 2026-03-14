@@ -34,6 +34,7 @@ public class MedicalRecordDAO {
         ResultSet rs = ps.executeQuery();
 
         List<MedicalRecord> list = new ArrayList<>();
+        System.out.println("Medical Records for Patient");
         while (rs.next()) {
             MedicalRecord mr = new MedicalRecord(
                     rs.getInt("patient_id"),
