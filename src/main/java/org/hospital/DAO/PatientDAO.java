@@ -49,6 +49,6 @@ public class PatientDAO {
         System.out.println("── Patients diagnosed more than once ──");
         while (rs.next())
             System.out.println("  " + rs.getString("first_name") + " "
-                    + rs.getString("last_name") + " — "+ " diagnoses");
+                    + rs.getString("last_name") + " — " + rs.getInt("cnt") + " diagnoses");
     }
 }
