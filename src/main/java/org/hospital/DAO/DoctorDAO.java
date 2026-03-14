@@ -13,7 +13,7 @@ public class DoctorDAO {
 
     @Autowired
     private Connection connection;
-    public void insertDoctor(Doctor doctor) throws SQLException {
+    public void addDoctor(Doctor doctor) throws SQLException {
         String sql = "INSERT INTO doctors (first_name, last_name, specialty, phone_number, email) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.setString(1, doctor.getFirst_name());
