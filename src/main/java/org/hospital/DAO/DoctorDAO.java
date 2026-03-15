@@ -22,7 +22,7 @@ public class DoctorDAO {
         ps.setString(4, doctor.getPhone_number());
         ps.setString(5, doctor.getEmail());
         ps.executeUpdate();
-        System.out.println("Doctors inserted sucessfully");
+        System.out.println("Doctors inserted successfully");
 
         }
     public List<String> findPatientsByDoctor(int doctorId) throws SQLException {

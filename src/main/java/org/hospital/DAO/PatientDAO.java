@@ -24,13 +24,7 @@ public class PatientDAO {
         ps.executeUpdate();
         System.out.println("Patients inserted successfully");
     }
-    public void linkDoctorToPatient(int doctorId, int patientId) throws SQLException {
-        String sql = "INSERT INTO doctor_patient (doctor_id, patient_id) VALUES (?, ?) ";
-        PreparedStatement ps = connection.prepareStatement(sql);
-        ps.setInt(1, doctorId);
-        ps.setInt(2, patientId);
-        ps.executeUpdate();
-    }
+
     public void deletePatient(int patientId) throws SQLException {
         String sql = "DELETE FROM patients WHERE id = ?";
         PreparedStatement ps = connection.prepareStatement(sql);
